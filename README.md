@@ -13,8 +13,8 @@ Este proyecto configura un entorno de prueba para Kafka Connect con PostgreSQL, 
 
 1. Clone este repositorio en su máquina local:
    ```
-   git clone <URL_DEL_REPOSITORIO>
-   cd <NOMBRE_DEL_DIRECTORIO>
+   git clone [<URL_DEL_REPOSITORIO>](https://github.com/AZapata27/kafka-connect-demo.git)
+   cd kafka-connect-demo
    ```
 
 2. Asegúrese de que el archivo `docker-compose.yml` esté presente en el directorio.

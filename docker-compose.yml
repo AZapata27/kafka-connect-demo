@@ -1,16 +1,25 @@
-version: '3'
-
 services:
-  postgres:
-    image: postgres:13
+  postgres-source:
+    image: postgres:latest
     environment:
-      POSTGRES_DB: mydb
+      POSTGRES_DB: postgres
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_source_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+
+  postgres-sink:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_sink_data:/var/lib/postgresql/data
+    ports:
+      - "5450:5432"
 
   zookeeper:
     image: confluentinc/cp-zookeeper:6.2.0
@@ -43,7 +52,7 @@ services:
     image: confluentinc/cp-kafka-connect:6.2.0
     depends_on:
       - kafka
-      - postgres
+      - postgres-source
     environment:
       CONNECT_BOOTSTRAP_SERVERS: kafka:9092
       CONNECT_REST_PORT: 8083
@@ -78,7 +87,7 @@ services:
     image: confluentinc/cp-kafka-connect:6.2.0
     depends_on:
       - kafka
-      - postgres
+      - postgres-sink
     environment:
       CONNECT_BOOTSTRAP_SERVERS: kafka:9092
       CONNECT_REST_PORT: 8084
@@ -109,5 +118,7 @@ services:
         echo "Launching Kafka Connect worker"
         /etc/confluent/docker/run
 
+
 volumes:
-  postgres_data:
+  postgres_source_data:
+  postgres_sink_data:

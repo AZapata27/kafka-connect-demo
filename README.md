@@ -26,7 +26,7 @@ Este proyecto configura un entorno de prueba para Kafka Connect con PostgreSQL, 
 
 4. Ejecute el script de inicialización para preparar el entorno:
    ```
-   ./init.bash
+   docker compose up -d
    ```
 
 5. Espere a que todos los servicios estén en funcionamiento. Puede verificar el estado de los contenedores con:

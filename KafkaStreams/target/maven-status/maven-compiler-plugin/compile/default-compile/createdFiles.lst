@@ -1,0 +1,8 @@
+com/example/kstreams/streams/ComprasTopology.class
+com/example/kstreams/streams/ComprasTopology$CompraSerde.class
+com/example/kstreams/config/TopicsProperties$Demo.class
+com/example/kstreams/KafkaStreamsDemoApplication.class
+com/example/kstreams/api/QueryController.class
+com/example/kstreams/model/Compra.class
+com/example/kstreams/config/TopicsProperties$Topics.class
+com/example/kstreams/config/TopicsProperties.class

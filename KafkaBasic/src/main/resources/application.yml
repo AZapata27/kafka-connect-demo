@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: kafka-basic
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: kafka-basic-demo
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+app:
+  topics:
+    input: CDC_compras
+    highValue: compras_altas
+    lowValue: compras_bajas
+    points: compras_puntos
+  demo:
+    highValueThreshold: 100000
+    pointsFactor: 1000   # 1 punto por cada 1000 de valor
+    bigGiftThreshold: 200 # regalo grande si puntos >= 200
+    smallGiftThreshold: 50 # regalo pequeño si puntos >= 50

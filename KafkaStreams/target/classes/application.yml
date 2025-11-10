@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: kafka-streams-demo
+  kafka:
+    bootstrap-servers: localhost:9092
+    streams:
+      application-id: kstreams-demo
+      properties:
+        commit.interval.ms: 1000
+        cache.max.bytes.buffering: 0
+        default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+        default.value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+server:
+  port: 9099
+
+app:
+  topics:
+    input: CDC_compras
+    highValue: compras_altas
+    lowValue: compras_bajas
+  demo:
+    highValueThreshold: 100000

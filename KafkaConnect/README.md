@@ -2,7 +2,7 @@
 
 Este proyecto configura un entorno de prueba para Kafka Connect con PostgreSQL, utilizando Docker Compose.
 
-![Diagrama de Arquitectura](./kafka-connect-ejemplo.png)
+![Diagrama de Arquitectura](kafka-connect-ejemplo.png)
 
 ## Requisitos previos
 

@@ -1,0 +1,5 @@
+/home/quind-desa12/IdeaProjects/kafka-connect-demo/KafkaStreams/src/main/java/com/example/kstreams/streams/ComprasTopology.java
+/home/quind-desa12/IdeaProjects/kafka-connect-demo/KafkaStreams/src/main/java/com/example/kstreams/KafkaStreamsDemoApplication.java
+/home/quind-desa12/IdeaProjects/kafka-connect-demo/KafkaStreams/src/main/java/com/example/kstreams/config/TopicsProperties.java
+/home/quind-desa12/IdeaProjects/kafka-connect-demo/KafkaStreams/src/main/java/com/example/kstreams/model/Compra.java
+/home/quind-desa12/IdeaProjects/kafka-connect-demo/KafkaStreams/src/main/java/com/example/kstreams/api/QueryController.java
